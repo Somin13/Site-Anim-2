@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&family=Sawarabi+Mincho&display=swap');
+
+body{
+  margin: 0;
+  background: linear-gradient(to right, black, rgb(109, 19, 109));
+}
+
+#wrap {
+  font-family: "Sawarabi Mincho", serif;
+  font-size: 21px;
+  line-height: 1.6;
+  margin: 0;
+  display: flex;
+  color: rgba(197, 131, 39, 0.949);
+  transition: transform .4s cubic-bezier(.25, .1, .25, 1);
+  position: fixed;
+  left: 20px;
+  top: 0;
+  z-index: 1;
+  height: 100vh;
+  background-color: rgb(62, 0, 97);
+}
+
+#wrap:not(:target) {
+  transform: translate3d(-335px, 0, 0);
+}
+
+#wrap:target {
+  transform: translate3d(-20px, 0, 0);
+}
+
+#open, #close {
+  height: 50px;
+  text-align: right;
+  display: block;
+  margin-right: -30px;
+}
+
+#wrap:target #open,
+#wrap:not(:target) #close {
+  display: none;
+}
+
+#wrap:target #open {
+  display: none;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  display: block;
+}
+
+.header {
+  width: 360px;
+  padding: 0 30px;
+  display:inline-block;
+  vertical-align:top;
+}
+
+.nav {
+  padding: 25px;
+}
+
+.main {
+  flex: 1;
+  display:inline-block;
+  padding-left: 5%;
+}
+  
+p {
+  max-width: 590px;
+  color:rgb(230, 208, 185);
+  font-size: 20px;
+}
+  
+.logo{
+  width: 90px;
+  align-items: flex-end;
+}
+  
+.logo img{
+  width: 150%;
+}
+
+.oplogo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.oplogo img{
+  width: 30%;
+}
+
+.block-container{
+  background-image: url(../image/mugiwara.webp);
+  background-size: 100%;
+  padding: 100px;
+  margin: 70px;
+  overflow: hidden;
+  position: relative;
+}
+
+.caroussel-images {
+  animation: scroll 10s linear infinite;
+  animation-direction: alternate;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+.caroussel-images img{
+  width: 14%;
+  flex-shrink: 0;
+}
+
+.caroussel-images2{
+  display: flex;
+  justify-content: space-around;
+  animation: scroll 10s linear infinite;
+  animation-direction: alternate-reverse;
+}
+
+.caroussel-images2 img{
+  width: 14%;
+  flex-shrink: 0;
+  gap: 10%;
+}
+
+@keyframes scroll{
+  0%{
+    transform: translate(0);
+  }
+  100%{
+    transform: translateX(-50%);
+  }
+}
+
+.wano{
+  background-color: rgb(35, 21, 43);
+  padding: 50px;
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-wrapper{
+  margin: 20px;
+}
+
+.image-wano{
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.image-wano:hover{
+  transform: scale(1.1);
+}
+
+.presentation{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.presentation img {
+  margin: 20px;
+  width: 100%;
+}
+
+.henemy{
+  color: white;
+  font-size: 50px;
+}
+
+.voila{
+  font-size: 100px;
+}
+
+.idk{
+  background-color: rgb(64, 27, 84);
+  padding-left: 100px;
+  padding-bottom: 50px;
+  padding-right: 100px;
+  border-radius: 25%;
+  filter: drop-shadow(0 0 0.80rem rgb(193, 54, 228));
+  opacity: 0.7;
+}
+
+
+.nothing {
+  color: white;
+  filter: drop-shadow(0 0 0.80rem rgb(193, 54, 228));
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.zoro-nothing{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.zoro-nothing img{
+  width: 30%;
+  transform: scale(1.1);
+}
+
+.boys{
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  gap: 50px;
+  margin-top: 100px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 40px;
+}
+
+.little{
+  color: rgb(242, 238, 244);
+  font-size: 50px;
+  padding-top: 50px;
+}
+
+.parah{
+  font-size: 25px;
+}
+
+.boys img{
+  width: 100%;
+  border-radius: 50px;
+  filter: drop-shadow(0 0 0.75rem rgb(87, 62, 38));
+  
+}
+
+.boys img:hover{
+  transform: scale(1.1);
+}
+
+.girls{
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  gap: 50px;
+  margin-top: 100px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 40px;
+}
+
+.little2{
+  color: rgb(242, 238, 244);
+  font-size: 50px;
+  padding-top: 50px;
+}
+
+.parah2{
+  font-size: 25px;
+}
+
+.girls img{
+  width: 100%;
+  border-radius: 50px;
+  filter: drop-shadow(0 0 0.75rem rgb(87, 62, 38));
+  
+}
+
+.girls img:hover{
+  transform: scale(1.1);
+}
+
+.video-container{
+  width: 70%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-container iframe{
+  aspect-ratio: 16/9;
+}
+
+.logo-part{
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10%;
+  padding-bottom: 5%;
+}
+
+.logo-part img{
+  width: 10%;
+}
+
+footer{
+  background-color: rgb(62, 0, 97);
+  
+}
+
+.fst-foot{
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  font-size: 15px;
+  padding-top: 30px;
+  border-bottom: solid;color: rgb(158, 123, 90);
+}
+
+.fst-foot img{
+  width: 120px;
+}
+
+.fst-foot a{
+  color: white; text-decoration: none;
+  font-size: 20px;
+  margin: 20px;
+  text-align: center;
+  padding: 0%;
+}
+
+li{
+  list-style-type: none;
+}
+
+.snd-para{
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.slogan{
+  font-size: 30px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  padding: 0;
+  text-align: center;
+}
+
+.reseaux{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  padding-top: 30px;
+  margin: 0px;
+  padding-bottom: 90px;
+  padding-top: 50px;
+}
+
+.reseaux img{
+  width: 40px;
+}
